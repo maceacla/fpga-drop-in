@@ -210,7 +210,7 @@
                     <div class="bg-gray-50 p-6 rounded-lg shadow-md card-animate">
                         <div class="text-4xl text-red-700 mb-4">🏢</div>
                         <h3 class="text-xl font-semibold text-red-700 mb-2">Industry Collaboration</h3>
-                        <p class="text-gray-700">Participate in research projects in collaboration with leading tech companies like Fidus, Jabil, Nokia, and Ciena, addressing real-world challenges.</p>
+                        <p class="text-gray-700">Participate in research projects in collaboration with leading tech companies like XXXX, XXXX, XXXX, and XXXX, addressing real-world challenges.</p>
                     </div>
                     <!-- Card 4: Expert Support & Resources -->
                     <div class="bg-gray-50 p-6 rounded-lg shadow-md card-animate">
@@ -243,7 +243,7 @@
                 </p>
                 <ul class="list-disc list-inside space-y-2 text-lg">
                     <li>Self-paced learning with tutorials and Verilog guides.</li>
-                    <li>Access to industry-aligned projects with partners like Fidus, Nokia, and Ciena.</li>
+                    <li>Access to industry-aligned projects with partners like XXXX, XXXX, and XXXX.</li>
                     <li>Peer support and workshops for students at all levels.</li>
                 </ul>
                 <p class="text-lg mt-4">
@@ -280,24 +280,126 @@
         <!-- Sample FPGA Projects Section -->
         <section id="projects" class="py-16 bg-gray-100 animate-on-scroll">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl font-bold text-red-700 mb-6 text-center">Sample FPGA Projects</h2>
-                <p class="text-lg mb-4">Explore projects that build your skills from beginner to advanced:</p>
-                <div class="space-y-6">
-                    <div class="bg-white p-6 rounded-lg shadow-md card-animate">
-                        <h3 class="text-xl font-semibold text-red-700 mb-2">Level 1: Blinking LED</h3>
-                        <p>Program an LED to blink, learning FPGA basics. Extend by adding switch controls.</p>
+                <h2 class="text-3xl font-bold text-red-700 mb-8 text-center">Sample FPGA Projects</h2>
+
+                <!-- Tab Navigation -->
+                <div class="mb-8 flex flex-wrap justify-center space-x-1 sm:space-x-2">
+                    <button data-tab-target="#year1-projects" class="tab-button py-2 px-3 sm:px-4 text-sm sm:text-base rounded font-semibold bg-red-700 text-white">1st Year</button>
+                    <button data-tab-target="#year2-projects" class="tab-button py-2 px-3 sm:px-4 text-sm sm:text-base rounded font-semibold bg-gray-200 text-gray-700 hover:bg-gray-300">2nd Year</button>
+                    <button data-tab-target="#year3-projects" class="tab-button py-2 px-3 sm:px-4 text-sm sm:text-base rounded font-semibold bg-gray-200 text-gray-700 hover:bg-gray-300">3rd Year</button>
+                    <button data-tab-target="#year4-projects" class="tab-button py-2 px-3 sm:px-4 text-sm sm:text-base rounded font-semibold bg-gray-200 text-gray-700 hover:bg-gray-300">4th Year</button>
+                </div>
+
+                <!-- Tab Content Panels -->
+                <!-- Panel 1: 1st Year -->
+                <div id="year1-projects" class="tab-content">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-2 text-center">1st Year - Introductory</h3>
+                    <p class="text-md text-gray-600 mb-8 text-center">Focus: Logic, State Machines, Basic I/O</p>
+                    <div class="flex flex-wrap justify-center gap-8">
+                        <div class="bg-white p-6 rounded-lg shadow-md card-animate w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333333%-1.333333rem)]">
+                            <h4 class="text-xl font-semibold text-red-700 mb-2">Binary Clock</h4>
+                            <p class="text-gray-700">Learn timekeeping, counters, and seven-segment displays.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md card-animate w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333333%-1.333333rem)]">
+                            <h4 class="text-xl font-semibold text-red-700 mb-2">Reaction Timer Game</h4>
+                            <p class="text-gray-700">Combines switches, LEDs, and basic timing logic.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md card-animate w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333333%-1.333333rem)]">
+                            <h4 class="text-xl font-semibold text-red-700 mb-2">Simple Calculator (4-bit inputs)</h4>
+                            <p class="text-gray-700">Finite state machine design, BCD, and combinational logic practice.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md card-animate w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333333%-1.333333rem)]">
+                            <h4 class="text-xl font-semibold text-red-700 mb-2">Morse Code Encoder/Decoder</h4>
+                            <p class="text-gray-700">Bit encoding, shift registers, and output control.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md card-animate w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333333%-1.333333rem)]">
+                            <h4 class="text-xl font-semibold text-red-700 mb-2">LED Music Visualizer</h4>
+                            <p class="text-gray-700">Use basic amplitude sampling with hardcoded audio input for LED pattern output.</p>
+                        </div>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md card-animate">
-                        <h3 class="text-xl font-semibold text-red-700 mb-2">Level 2: Traffic Light Controller</h3>
-                        <p>Design a finite state machine for a traffic light sequence using LEDs.</p>
+                </div>
+
+                <!-- Panel 2: 2nd Year (initially hidden) -->
+                <div id="year2-projects" class="tab-content hidden">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-2 text-center">2nd Year - Intermediate</h3>
+                    <p class="text-md text-gray-600 mb-8 text-center">Focus: Embedded Integration, Control, IO Devices</p>
+                    <div class="flex flex-wrap justify-center gap-8">
+                        <div class="bg-white p-6 rounded-lg shadow-md card-animate w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333333%-1.333333rem)]">
+                            <h4 class="text-xl font-semibold text-red-700 mb-2">UART Terminal Interface</h4>
+                            <p class="text-gray-700">Design a UART controller for text-based communication with a PC terminal.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md card-animate w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333333%-1.333333rem)]">
+                            <h4 class="text-xl font-semibold text-red-700 mb-2">Temperature Monitor (I2C)</h4>
+                            <p class="text-gray-700">Teaches I2C protocol implementation and digital interfacing with a sensor.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md card-animate w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333333%-1.333333rem)]">
+                            <h4 class="text-xl font-semibold text-red-700 mb-2">Basic VGA Controller</h4>
+                            <p class="text-gray-700">Introduces video timing, frame buffers (e.g., draw shapes or grids).</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md card-animate w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333333%-1.333333rem)]">
+                            <h4 class="text-xl font-semibold text-red-700 mb-2">Digital Lock with Keypad</h4>
+                            <p class="text-gray-700">FSM with user input, password storage, and error handling on seven-segment display.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md card-animate w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333333%-1.333333rem)]">
+                            <h4 class="text-xl font-semibold text-red-700 mb-2">Pong Game on VGA</h4>
+                            <p class="text-gray-700">Builds on VGA controller with basic collision logic and simple game loop.</p>
+                        </div>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md card-animate">
-                        <h3 class="text-xl font-semibold text-red-700 mb-2">Level 3: UART Communication</h3>
-                        <p>Build a serial communication system to send data to a PC.</p>
+                </div>
+                
+                <!-- Panel 3: 3rd Year (initially hidden) -->
+                <div id="year3-projects" class="tab-content hidden">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-2 text-center">3rd Year - Applied Systems</h3>
+                    <p class="text-md text-gray-600 mb-8 text-center">Focus: Integration, Signal Processing, Real-Time</p>
+                    <div class="flex flex-wrap justify-center gap-8">
+                        <div class="bg-white p-6 rounded-lg shadow-md card-animate w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333333%-1.333333rem)]">
+                            <h4 class="text-xl font-semibold text-red-700 mb-2">PWM Motor Controller</h4>
+                            <p class="text-gray-700">Real-world motor control, feedback loops, and analog interfacing (via ADC).</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md card-animate w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333333%-1.333333rem)]">
+                            <h4 class="text-xl font-semibold text-red-700 mb-2">Audio Equalizer (Basic DSP)</h4>
+                            <p class="text-gray-700">FPGA processes audio in real-time, with adjustable gain per band.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md card-animate w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333333%-1.333333rem)]">
+                            <h4 class="text-xl font-semibold text-red-700 mb-2">FPGA Logic Analyzer</h4>
+                            <p class="text-gray-700">Capture and display simple digital signal waveforms triggered by edge detection.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md card-animate w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333333%-1.333333rem)]">
+                            <h4 class="text-xl font-semibold text-red-700 mb-2">IR Remote Decoder</h4>
+                            <p class="text-gray-700">Teaches signal timing, decoding (e.g., NEC protocol), and control output.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md card-animate w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333333%-1.333333rem)]">
+                            <h4 class="text-xl font-semibold text-red-700 mb-2">Digital Synthesizer</h4>
+                            <p class="text-gray-700">Generates chiptune-style waveforms from user input, DAC output via audio jack.</p>
+                        </div>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md card-animate">
-                        <h3 class="text-xl font-semibold text-red-700 mb-2">Level 4: Embedded System</h3>
-                        <p>Integrate sensors and displays for a real-time embedded application.</p>
+                </div>
+
+                <!-- Panel 4: 4th Year (initially hidden) -->
+                <div id="year4-projects" class="tab-content hidden">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-2 text-center">4th Year - Advanced</h3>
+                    <p class="text-md text-gray-600 mb-8 text-center">Focus: Embedded Systems, Computation, Mixed-Signal</p>
+                    <div class="flex flex-wrap justify-center gap-8">
+                        <div class="bg-white p-6 rounded-lg shadow-md card-animate w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333333%-1.333333rem)]">
+                            <h4 class="text-xl font-semibold text-red-700 mb-2">RISC-V Soft Processor</h4>
+                            <p class="text-gray-700">Build and test a simple CPU implementation, optionally with peripherals.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md card-animate w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333333%-1.333333rem)]">
+                            <h4 class="text-xl font-semibold text-red-700 mb-2">Face Detection Accelerator</h4>
+                            <p class="text-gray-700">Combines OpenCV pre-processing with FPGA for edge detection acceleration.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md card-animate w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333333%-1.333333rem)]">
+                            <h4 class="text-xl font-semibold text-red-700 mb-2">FPGA-Based CNN Inference</h4>
+                            <p class="text-gray-700">Low-resource image classifier (TinyML) on grayscale input (MNIST style).</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md card-animate w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333333%-1.333333rem)]">
+                            <h4 class="text-xl font-semibold text-red-700 mb-2">Ethernet Packet Sniffer</h4>
+                            <p class="text-gray-700">Interface with PHY, decode packet headers, and count traffic types.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md card-animate w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333333%-1.333333rem)]">
+                            <h4 class="text-xl font-semibold text-red-700 mb-2">Smart Oscilloscope Frontend</h4>
+                            <p class="text-gray-700">Input ADC stream, trigger detection, basic waveform rendering to display or HDMI.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -356,11 +458,18 @@
         <section id="industry" class="py-16 bg-gray-100 animate-on-scroll">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 class="text-3xl font-bold text-red-700 mb-6 text-center">Industry Partnerships</h2>
-                <p class="text-lg mb-4">Collaborate with leading companies on real-world projects:</p>
-                <ul class="list-disc list-inside space-y-2 text-lg">
-                    <li><strong>Fidus, Jabil, Nokia, Ciena</strong>: Work on embedded systems and communications challenges.</li>
-                    <li>Projects enhance employability through practical experience.</li>
-                </ul>
+                <p class="text-lg mb-4">
+                    The FPGA Drop-In Center at Carleton University is committed to building strong ties with industry leaders, creating pathways for job placements and long-term career opportunities in electrical engineering. Through strategic partnerships with companies such as XXXX, XXXX, XXXX, and XXXX, the center integrates real-world perspectives into the student experience.
+                </p>
+                <p class="text-lg mb-4">
+                    Several projects at the center are directly suggested by our industry partners, ensuring that students work on challenges that mirror current industry needs, such as optimizing embedded systems or developing advanced communication solutions. These projects provide practical experience that aligns with professional demands, giving students a competitive edge in the job market.
+                </p>
+                <p class="text-lg mb-4">
+                    Industry partners actively contribute through workshops and hackathons, offering hands-on opportunities to collaborate with professionals and explore cutting-edge applications of FPGA technology. These events not only enhance technical skills but also facilitate networking, often leading to internships and job offers for participants.
+                </p>
+                <p class="text-lg">
+                    Additionally, the center benefits from strong industry guidance, ensuring that students use the most modern tools and equipment employed by leading companies. This exposure to industry-standard practices prepares students for seamless transitions into professional roles, equipping them with the skills and confidence needed to excel in their future careers.
+                </p>
             </div>
         </section>
 
@@ -369,8 +478,7 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
                 <p class="text-lg mb-4">Reach out to learn more or get involved!</p>
-                <p class="text-lg mb-4">Project Lead: Dr. Leonard MacEachern</p>
-                <p class="text-lg mb-4">Email: leonardmaceachern@cunet.carleton.ca</p>
+                <p class="text-lg mb-4">Email: chair@doe..carleton.ca</p>
                 <p class="text-lg">Department of Electronics, Carleton University</p>
             </div>
         </section>
@@ -392,6 +500,7 @@
         // Scroll-triggered animations and video autoplay
         document.addEventListener('DOMContentLoaded', () => {
             const elementsToObserve = document.querySelectorAll('.animate-on-scroll, .card-animate, video.video-on-scroll');
+            const videoElement = document.querySelector('video.video-on-scroll'); // Get the video element
             
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -422,6 +531,14 @@
 
             elementsToObserve.forEach(el => observer.observe(el));
 
+            // Add click to replay functionality to the video
+            if (videoElement) {
+                videoElement.addEventListener('click', () => {
+                    videoElement.currentTime = 0; // Reset video to the beginning
+                    videoElement.play(); // Play the video
+                });
+            }
+
             // Mobile menu toggle
             const menuToggle = document.getElementById('menu-toggle');
             const mobileMenu = document.getElementById('mobile-menu');
@@ -434,6 +551,38 @@
                 mobileMenu.querySelectorAll('a').forEach(link => {
                     link.addEventListener('click', () => {
                         mobileMenu.classList.add('hidden');
+                    });
+                });
+            }
+
+            // Tabbed interface for Projects Section
+            const tabButtons = document.querySelectorAll('.tab-button[data-tab-target]');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            if (tabButtons.length > 0 && tabContents.length > 0) {
+                // Set initial state based on HTML (first tab active, its content visible)
+                // The first button already has active styles from HTML, and its panel is not hidden.
+
+                tabButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        const targetPanelSelector = button.dataset.tabTarget;
+                        const targetPanel = document.querySelector(targetPanelSelector);
+
+                        // Deactivate all tab buttons and hide all content panels
+                        tabButtons.forEach(btn => {
+                            btn.classList.remove('bg-red-700', 'text-white');
+                            btn.classList.add('bg-gray-200', 'text-gray-700', 'hover:bg-gray-300');
+                        });
+                        tabContents.forEach(panel => {
+                            panel.classList.add('hidden');
+                        });
+
+                        // Activate clicked tab button and show its content panel
+                        button.classList.add('bg-red-700', 'text-white');
+                        button.classList.remove('bg-gray-200', 'text-gray-700', 'hover:bg-gray-300');
+                        if (targetPanel) {
+                            targetPanel.classList.remove('hidden');
+                        }
                     });
                 });
             }
