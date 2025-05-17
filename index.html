@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPGA Drop-In Center - Carleton University</title>
+    <!-- Base tag for GitHub Pages URL handling -->
+    <base href="/">
+    <!-- Static Tailwind CSS build -->
+    <link href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Animate.css for CSS animations -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <!-- Google Fonts: Inter and Merriweather -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', Arial, sans-serif; /* Fallback font */
+        }
+        /* Custom scroll-triggered animations */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Card animations */
+        .card-animate {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+        .card-animate.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+        .board-card-left {
+            transform: translateX(-50px);
+        }
+        .board-card-right {
+            transform: translateX(50px);
+        }
+        .board-card-left.visible,
+        .board-card-right.visible {
+            transform: translateX(0);
+        }
+        /* Red-black-white color scheme */
+        .bg-red-gradient {
+            background: linear-gradient(to right, #A6192E, #000000);
+        }
+        .text-red-700 {
+            color: #A6192E;
+        }
+        .bg-red-700 {
+            background-color: #A6192E;
+        }
+        .hover\:bg-red-800:hover {
+            background-color: #8B1625;
+        }
+        /* Hero section background with image and overlay */
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://assets.grok.com/users/b49bc330-c413-4d98-86e4-01206b72f3cd/generated/JxYffhiNQ76YGKBF/image.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            /* Fallback to gradient if image fails */
+            background-color: #A6192E;
+        }
+        /* Elegant typography for hero */
+        .hero-title {
+            font-family: 'Merriweather', serif;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        .hero-text {
+            font-family: 'Merriweather', serif;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        .hero-hr {
+            border-color: #A6192E;
+            border-width: 1px;
+        }
+        /* Why Learn section */
+        .why-learn-title {
+            font-family: 'Merriweather', serif;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        GitHub Pages Deployment Instructions:
+        1. Create a GitHub repository (e.g., 'fpga-drop-in-center').
+        2. Save this file as 'index.html' in the root or '/docs' folder.
+        3. Enable GitHub Pages in repository settings, selecting the 'main' branch and root or '/docs' folder.
+        4. If hosted in a subdirectory (e.g., username.github.io/repo), update <base href="/repo/">.
+        5. Push changes to GitHub, and access the site at username.github.io/repo.
+    -->
+    <div id="root">
+        <!-- Header -->
+        <header class="fixed top-0 w-full bg-white shadow-md z-10">
+            <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+                <h1 class="text-xl font-bold text-red-700">FPGA Drop-In Center</h1>
+                <div class="space-x-4">
+                    <a href="#home" class="text-black hover:text-red-700">Home</a>
+                    <a href="#why-learn" class="text-black hover:text-red-700">Why FPGA</a>
+                    <a href="#about" class="text-black hover:text-red-700">About</a>
+                    <a href="#courses" class="text-black hover:text-red-700">Courses</a>
+                    <a href="#projects" class="text-black hover:text-red-700">Projects</a>
+                    <a href="#boards" class="text-black hover:text-red-700">Boards</a>
+                    <a href="#software" class="text-black hover:text-red-700">Software</a>
+                    <a href="#edi" class="text-black hover:text-red-700">EDI</a>
+                    <a href="#industry" class="text-black hover:text-red-700">Industry</a>
+                    <a href="#contact" class="text-black hover:text-red-700">Contact</a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section id="home" class="min-h-screen hero-bg text-white flex items-center py-16 sm:py-24 animate-on-scroll">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl sm:text-5xl font-bold mb-6 hero-title animate__animated animate__fadeInUp">
+                    Hands-On FPGA Learning<br>for Every EE Student
+                </h1>
+                <hr class="hero-hr w-24 mx-auto mb-6">
+                <p class="text-lg sm:text-xl font-normal leading-relaxed max-w-2xl mx-auto hero-text animate__animated animate__fadeInUp animate__delay-1s">
+                    At Carleton University’s Department of Electronics, we prioritize hands-on learning to prepare undergraduate electrical engineering students for their careers. Field-Programmable Gate Arrays (FPGAs) are powerful tools used in fields like signal processing, communications, and embedded systems, but many students are unfamiliar with them when they begin their studies. Our FPGA Drop-In Center addresses this gap by introducing students to FPGAs and providing the resources to explore and master them.
+                    <br><br>
+                    Serving approximately 1,950 students each year, the drop-in center is a welcoming space where students of all skill levels can work with FPGA development boards. Through practical labs, guided tutorials, and peer-supported workshops, students learn to design and test circuits, gaining confidence with FPGAs. The center supports four core courses, offering projects like building logic circuits or programming embedded systems. This approach ensures every student, regardless of prior experience, can engage with FPGAs and develop valuable skills for industry and research.
+                    <br><br>
+                    By making FPGAs accessible and providing clear, structured support, the drop-in center helps students move from curiosity to competence. It’s a place where learning by doing builds a strong foundation for electrical engineering success.
+                </p>
+            </div>
+        </section>
+
+        <!-- Why Learn with FPGA Section -->
+        <section id="why-learn" class="py-16 bg-gray-100 animate-on-scroll">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-red-700 mb-8 text-center why-learn-title">Why Learn with FPGA?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Left Column: Paragraphs -->
+                    <div class="text-lg leading-relaxed">
+                        <p class="mb-4">
+                            FPGAs are integral to modern applications like AI, signal processing, and embedded systems. They offer flexibility and performance, making them essential tools in today’s engineering landscape.
+                        </p>
+                        <p class="mb-4">
+                            Hands-on experience with FPGAs enhances employability and prepares you for industry demands. At Carleton, our students gain practical skills that set them apart in the job market.
+                        </p>
+                        <p>
+                            The Drop-In Center provides access to real hardware, fostering practical skills over simulations. This approach ensures you’re ready to tackle real-world engineering challenges.
+                        </p>
+                    </div>
+                    <!-- Right Column: List -->
+                    <div>
+                        <ul class="list-disc list-inside space-y-2 text-lg">
+                            <li>Real-world applications in AI and DSP.</li>
+                            <li>Enhanced career prospects.</li>
+                            <li>Practical, hands-on learning.</li>
+                        </ul>
+                        <div class="mt-6"> <!-- Added margin for spacing -->
+                            <video class="w-full rounded-lg shadow-lg video-on-scroll" muted playsinline>
+                                <source src="a_happy_student.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What We Offer Section -->
+        <section id="what-we-offer" class="py-16 bg-white animate-on-scroll">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-red-700 mb-4 text-center">What We Offer</h2>
+                <p class="text-lg text-gray-700 mb-12 text-center max-w-3xl mx-auto">
+                    The center provides a dynamic learning ecosystem with resources and opportunities to excel.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Card 1: Hands-On Labs -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md card-animate">
+                        <div class="text-4xl text-red-700 mb-4">🧪</div>
+                        <h3 class="text-xl font-semibold text-red-700 mb-2">Hands-On Labs</h3>
+                        <p class="text-gray-700">Engage in practical lab exercises integrated into core EE courses, experimenting in controlled environments with state-of-the-art FPGA boards.</p>
+                    </div>
+                    <!-- Card 2: Project Development -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md card-animate">
+                        <div class="text-4xl text-red-700 mb-4">💻</div>
+                        <h3 class="text-xl font-semibold text-red-700 mb-2">Project Development</h3>
+                        <p class="text-gray-700">Bring your innovative ideas to life. Tackle projects ranging from basic logic circuits to complex SoC designs and hardware accelerators.</p>
+                    </div>
+                    <!-- Card 3: Industry Collaboration -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md card-animate">
+                        <div class="text-4xl text-red-700 mb-4">🏢</div>
+                        <h3 class="text-xl font-semibold text-red-700 mb-2">Industry Collaboration</h3>
+                        <p class="text-gray-700">Participate in research projects in collaboration with leading tech companies like Fidus, Jabil, Nokia, and Ciena, addressing real-world challenges.</p>
+                    </div>
+                    <!-- Card 4: Expert Support & Resources -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md card-animate">
+                        <div class="text-4xl text-red-700 mb-4">🛠️</div>
+                        <h3 class="text-xl font-semibold text-red-700 mb-2">Expert Support & Resources</h3>
+                        <p class="text-gray-700">Access curated tutorials, Verilog guides, FPGA activities, workshops, and peer assistance from student assistants in a supportive environment.</p>
+                    </div>
+                    <!-- Card 5: State-of-the-Art Boards -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md card-animate">
+                        <div class="text-4xl text-red-700 mb-4">💡</div>
+                        <h3 class="text-xl font-semibold text-red-700 mb-2">State-of-the-Art Boards</h3>
+                        <p class="text-gray-700">Get hands-on with a portfolio of AMD/Xilinx developer boards, including Basys 3 for introductory concepts, Nexys A7 for advanced exploration, and PYNQ-Z2 for SoC and Python-based development.</p>
+                    </div>
+                    <!-- Card 6: Progressive Learning Pathway -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md card-animate">
+                        <div class="text-4xl text-red-700 mb-4">⚡</div>
+                        <h3 class="text-xl font-semibold text-red-700 mb-2">Progressive Learning Pathway</h3>
+                        <p class="text-gray-700">Develop skills progressively, from blinking LEDs and basic logic gates to UART/SPI communication, DSP blocks, and full embedded system integration on FPGAs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-16 bg-gray-100 animate-on-scroll">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-red-700 mb-6 text-center">About the FPGA Drop-In Center</h2>
+                <p class="text-lg mb-4">
+                    The FPGA Drop-In Center at Carleton University is a hub for electrical engineering students to gain practical experience with Field-Programmable Gate Arrays (FPGAs). Supporting around 1,950 students annually across four courses, the center provides:
+                </p>
+                <ul class="list-disc list-inside space-y-2 text-lg">
+                    <li>Self-paced learning with tutorials and Verilog guides.</li>
+                    <li>Access to industry-aligned projects with partners like Fidus, Nokia, and Ciena.</li>
+                    <li>Peer support and workshops for students at all levels.</li>
+                </ul>
+                <p class="text-lg mt-4">
+                    Located in the Department of Electronics, the center fosters a culture of experimentation, enabling students to develop skills essential for modern engineering challenges.
+                </p>
+            </div>
+        </section>
+
+        <!-- Supported Courses Section -->
+        <section id="courses" class="py-16 bg-white animate-on-scroll">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-red-700 mb-6 text-center">Supported Courses</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md card-animate">
+                        <h3 class="text-xl font-semibold text-red-700 mb-2">ECOR 1032</h3>
+                        <p>Circuits and Mechatronics: Learn FPGA-controlled systems. (1,400 students)</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md card-animate">
+                        <h3 class="text-xl font-semibold text-red-700 mb-2">ELEC 2607</h3>
+                        <p>Switching Circuits: Implement circuits with FPGAs. (200 students)</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md card-animate">
+                        <h3 class="text-xl font-semibold text-red-700 mb-2">ELEC 3500</h3>
+                        <p>Digital Electronics: Design advanced Verilog circuits. (250 students)</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md card-animate">
+                        <h3 class="text-xl font-semibold text-red-700 mb-2">ELEC 3907</h3>
+                        <p>Engineering Project: Build complex FPGA systems. (100 students)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sample FPGA Projects Section -->
+        <section id="projects" class="py-16 bg-gray-100 animate-on-scroll">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-red-700 mb-6 text-center">Sample FPGA Projects</h2>
+                <p class="text-lg mb-4">Explore projects that build your skills from beginner to advanced:</p>
+                <div class="space-y-6">
+                    <div class="bg-white p-6 rounded-lg shadow-md card-animate">
+                        <h3 class="text-xl font-semibold text-red-700 mb-2">Level 1: Blinking LED</h3>
+                        <p>Program an LED to blink, learning FPGA basics. Extend by adding switch controls.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md card-animate">
+                        <h3 class="text-xl font-semibold text-red-700 mb-2">Level 2: Traffic Light Controller</h3>
+                        <p>Design a finite state machine for a traffic light sequence using LEDs.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md card-animate">
+                        <h3 class="text-xl font-semibold text-red-700 mb-2">Level 3: UART Communication</h3>
+                        <p>Build a serial communication system to send data to a PC.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md card-animate">
+                        <h3 class="text-xl font-semibold text-red-700 mb-2">Level 4: Embedded System</h3>
+                        <p>Integrate sensors and displays for a real-time embedded application.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommended FPGA Boards Section -->
+        <section id="boards" class="py-16 bg-white animate-on-scroll">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-red-700 mb-6 text-center">Recommended FPGA Boards</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md card-animate board-card-left">
+                        <h3 class="text-xl font-semibold text-red-700 mb-2">Digilent Basys 3</h3>
+                        <p>Ideal for beginners with 33,280 logic cells, LEDs, and switches. ($168.30 CAD)</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md card-animate">
+                        <h3 class="text-xl font-semibold text-red-700 mb-2">Digilent Nexys A7</h3>
+                        <p>Advanced FPGA with 101,440 logic cells, DDR2, and Ethernet. ($355.98 CAD)</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md card-animate board-card-right">
+                        <h3 class="text-xl font-semibold text-red-700 mb-2">TUL PYNQ-Z2</h3>
+                        <p>SoC development with Python support, 13,300 slices. ($175.44 CAD)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Software and Tools Section -->
+        <section id="software" class="py-16 bg-gray-100 animate-on-scroll">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-red-700 mb-6 text-center">Software and Tools</h2>
+                <p class="text-lg mb-4">Access free tools to design and program FPGAs:</p>
+                <ul class="list-disc list-inside space-y-2 text-lg">
+                    <li><strong>Vivado Design Suite</strong>: Free WebPACK for HDL design and simulation.</li>
+                    <li><strong>Vitis Platform</strong>: C/C++ and HLS for Zynq SoCs.</li>
+                    <li><strong>PYNQ Framework</strong>: Python-based development with Jupyter Notebooks.</li>
+                    <li><strong>PetaLinux Tools</strong>: Embedded Linux for advanced projects.</li>
+                </ul>
+                <p class="text-lg mt-4">Supported by AMD University Program tutorials and pynq.io resources.</p>
+            </div>
+        </section>
+
+        <!-- EDI Section -->
+        <section id="edi" class="py-16 bg-white animate-on-scroll">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-red-700 mb-6 text-center">Equity, Diversity, and Inclusion</h2>
+                <p class="text-lg mb-4">The center is committed to accessibility for all students through:</p>
+                <ul class="list-disc list-inside space-y-2 text-lg">
+                    <li>Outreach with IEEE Women in Engineering.</li>
+                    <li>Workshops for women, racial minorities, and economically disadvantaged students.</li>
+                    <li>Equal access to FPGA resources.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Industry Partnerships Section -->
+        <section id="industry" class="py-16 bg-gray-100 animate-on-scroll">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-red-700 mb-6 text-center">Industry Partnerships</h2>
+                <p class="text-lg mb-4">Collaborate with leading companies on real-world projects:</p>
+                <ul class="list-disc list-inside space-y-2 text-lg">
+                    <li><strong>Fidus, Jabil, Nokia, Ciena</strong>: Work on embedded systems and communications challenges.</li>
+                    <li>Projects enhance employability through practical experience.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 bg-red-700 text-white animate-on-scroll">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
+                <p class="text-lg mb-4">Reach out to learn more or get involved!</p>
+                <p class="text-lg mb-4">Project Lead: Dr. Leonard MacEachern</p>
+                <p class="text-lg mb-4">Email: leonardmaceachern@cunet.carleton.ca</p>
+                <p class="text-lg">Department of Electronics, Carleton University</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-black text-white py-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <p>© 2025 Carleton University. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Fallback message if scripts fail
+        window.addEventListener('error', () => {
+            document.getElementById('root').innerHTML = '<h1 class="text-center text-2xl mt-10 text-red-700">Error loading page. Please try refreshing or contact support.</h1>';
+        });
+
+        // Scroll-triggered animations and video autoplay
+        document.addEventListener('DOMContentLoaded', () => {
+            const elementsToObserve = document.querySelectorAll('.animate-on-scroll, .card-animate, video.video-on-scroll');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Add 'visible' class for CSS animations if applicable
+                        if (entry.target.classList.contains('animate-on-scroll') || entry.target.classList.contains('card-animate')) {
+                            entry.target.classList.add('visible');
+                        }
+
+                        // If the element is a video and has 'video-on-scroll', play it
+                        if (entry.target.tagName === 'VIDEO' && entry.target.classList.contains('video-on-scroll')) {
+                            const playPromise = entry.target.play();
+                            if (playPromise !== undefined) {
+                                playPromise.catch(error => {
+                                    console.error("Video autoplay failed:", error);
+                                    // Autoplay was prevented, browser might require user interaction.
+                                });
+                            }
+                        }
+                        observer.unobserve(entry.target); // Unobserve after action to prevent re-triggering
+                    }
+                });
+            }, { threshold: 0.1 }); // Trigger when 10% of the element is visible
+
+            elementsToObserve.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
