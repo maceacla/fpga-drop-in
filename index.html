@@ -59,7 +59,7 @@
         }
         /* Hero section background with image and overlay */
         .hero-bg {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://assets.grok.com/users/b49bc330-c413-4d98-86e4-01206b72f3cd/generated/JxYffhiNQ76YGKBF/image.jpg');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('landingPCB.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -429,15 +429,39 @@
         <!-- Software and Tools Section -->
         <section id="software" class="py-16 bg-gray-100 animate-on-scroll">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl font-bold text-red-700 mb-6 text-center">Software and Tools</h2>
-                <p class="text-lg mb-4">Access free tools to design and program FPGAs:</p>
-                <ul class="list-disc list-inside space-y-2 text-lg">
-                    <li><strong>Vivado Design Suite</strong>: Free WebPACK for HDL design and simulation.</li>
-                    <li><strong>Vitis Platform</strong>: C/C++ and HLS for Zynq SoCs.</li>
-                    <li><strong>PYNQ Framework</strong>: Python-based development with Jupyter Notebooks.</li>
-                    <li><strong>PetaLinux Tools</strong>: Embedded Linux for advanced projects.</li>
-                </ul>
-                <p class="text-lg mt-4">Supported by AMD University Program tutorials and pynq.io resources.</p>
+                <h2 class="text-3xl font-bold text-red-700 mb-8 text-center">Software and Hardware</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Software</h3>
+                        <p class="text-lg mb-4">Access free tools to design and program FPGAs:</p>
+                        <ul class="list-disc list-inside space-y-2 text-lg">
+                            <li><strong>Vivado Design Suite</strong> (Free WebPACK): HDL design, simulation, and synthesis.</li>
+                            <li><strong>Vitis Platform</strong>: C/C++ and HLS for Zynq SoCs.</li>
+                            <li><strong>PYNQ Framework</strong>: Python-based development with Jupyter Notebooks.</li>
+                            <li><strong>PetaLinux Tools</strong>: Embedded Linux for Xilinx FPGAs/SoCs.</li>
+                            <li><strong>QuestaSim (Free Student Edition)</strong>: Advanced HDL simulation.</li>
+                            <li><strong>MATLAB and Simulink with HDL Coder</strong>: Model-based design and HDL generation.</li>
+                            <li><strong>Verilator and Yosys</strong>: Open-source HDL simulation and synthesis.</li>
+                        </ul>
+                        <p class="text-lg mt-4">Supported by AMD University Program tutorials and pynq.io resources.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Hardware</h3>
+                        <p class="text-lg mb-4">Essential test and measurement equipment for FPGA development:</p>
+                        <ul class="list-disc list-inside space-y-2 text-lg">
+                            <li><strong>Oscilloscopes</strong>: For viewing signal integrity, timing, and digital waveforms.</li>
+                            <li><strong>Logic Analyzers</strong>: For capturing and analyzing multiple digital signals simultaneously.</li>
+                            <li><strong>Signal Generators</strong> (Arbitrary Waveform Generators): For creating test signals and stimuli.</li>
+                            <li><strong>Spectrum Analyzers</strong>: For analyzing frequency components of signals.</li>
+                            <li><strong>Digital Multimeters (DMMs)</strong>: For measuring voltage, current, and resistance.</li>
+                            <li><strong>Bench Power Supplies</strong>: For providing stable and adjustable DC power to circuits.</li>
+                            <li><strong>JTAG Debuggers/Programmers</strong>: For in-circuit debugging and programming FPGAs.</li>
+                            <li><strong>Soldering Stations & Rework Tools</strong>: For assembling and modifying prototype boards.</li>
+                            <li><strong>3D Printers</strong>: For creating custom enclosures, mounts, or mechanical parts for projects.</li>
+                            <li><strong>Anti-static Mats and Wrist Straps</strong>: For protecting sensitive electronic components.</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -445,12 +469,46 @@
         <section id="edi" class="py-16 bg-white animate-on-scroll">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 class="text-3xl font-bold text-red-700 mb-6 text-center">Equity, Diversity, and Inclusion</h2>
-                <p class="text-lg mb-4">The center is committed to accessibility for all students through:</p>
-                <ul class="list-disc list-inside space-y-2 text-lg">
-                    <li>Outreach with IEEE Women in Engineering.</li>
-                    <li>Workshops for women, racial minorities, and economically disadvantaged students.</li>
-                    <li>Equal access to FPGA resources.</li>
-                </ul>
+                <p class="text-lg mb-10 text-gray-700 text-center max-w-3xl mx-auto">
+                    At the FPGA Drop-In Center, we are dedicated to fostering an educational environment that champions equity, diversity, and inclusion (EDI). We recognize that a multitude of voices and experiences are essential for driving innovation in the field of FPGAs and beyond.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
+                    <!-- Commitment 1: Welcoming All -->
+                    <div class="bg-red-50 p-6 rounded-xl shadow-lg flex flex-col items-center text-center card-animate">
+                        <div class="text-5xl text-red-600 mb-4">✨</div>
+                        <h3 class="text-xl font-semibold text-red-700 mb-2">Welcoming All</h3>
+                        <p class="text-gray-600 text-sm">We actively encourage participation from individuals of all races, ethnicities, genders, gender identities and expressions, sexual orientations, ages, abilities, socio-economic backgrounds, religions, and all other dimensions of diversity.</p>
+                    </div>
+                    <!-- Commitment 2: Accessible Learning -->
+                    <div class="bg-red-50 p-6 rounded-xl shadow-lg flex flex-col items-center text-center card-animate">
+                        <div class="text-5xl text-red-600 mb-4">💡</div>
+                        <h3 class="text-xl font-semibold text-red-700 mb-2">Accessible Learning</h3>
+                        <p class="text-gray-600 text-sm">We aim to provide resources and instruction that are accessible and cater to diverse learning styles. We are committed to making reasonable accommodations. Please contact us if you have specific accessibility needs.</p>
+                    </div>
+                    <!-- Commitment 3: Respectful Environment -->
+                    <div class="bg-red-50 p-6 rounded-xl shadow-lg flex flex-col items-center text-center card-animate">
+                        <div class="text-5xl text-red-600 mb-4">🤝</div>
+                        <h3 class="text-xl font-semibold text-red-700 mb-2">Respectful Environment</h3>
+                        <p class="text-gray-600 text-sm">We are dedicated to maintaining a respectful, collaborative, and harassment-free learning space for all participants, instructors, and staff.</p>
+                    </div>
+                    <!-- Commitment 4: Breaking Down Barriers (Spans 1.5 columns on lg, centered) -->
+                    <div class="bg-red-50 p-6 rounded-xl shadow-lg flex flex-col items-center text-center card-animate md:col-span-1 lg:col-start-1 lg:col-span-1">
+                        <div class="text-5xl text-red-600 mb-4">🚀</div>
+                        <h3 class="text-xl font-semibold text-red-700 mb-2">Breaking Down Barriers</h3>
+                        <p class="text-gray-600 text-sm">We acknowledge that systemic barriers can discourage individuals from underrepresented groups. Our workshops aim to be a positive, empowering entry point into FPGAs. This includes outreach with groups like IEEE Women in Engineering.</p>
+                    </div>
+                    <!-- Commitment 5: Continuous Improvement (Spans 1.5 columns on lg, centered)-->
+                    <div class="bg-red-50 p-6 rounded-xl shadow-lg flex flex-col items-center text-center card-animate md:col-span-1 lg:col-span-2">
+                         <div class="text-5xl text-red-600 mb-4">🔄</div>
+                        <h3 class="text-xl font-semibold text-red-700 mb-2">Continuous Improvement</h3>
+                        <p class="text-gray-600 text-sm">We are committed to ongoing learning and refinement of our EDI practices and welcome feedback from our community on how we can better serve everyone.</p>
+                    </div>
+                </div>
+
+                <p class="text-lg text-gray-700 text-center max-w-3xl mx-auto">
+                    Join our workshops to gain new skills, connect with peers, and be part of an inclusive tech community.
+                </p>
             </div>
         </section>
 
