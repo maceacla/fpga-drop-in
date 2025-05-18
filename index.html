@@ -238,17 +238,60 @@
         <section id="about" class="py-16 bg-gray-100 animate-on-scroll">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 class="text-3xl font-bold text-red-700 mb-6 text-center">About the FPGA Drop-In Center</h2>
-                <p class="text-lg mb-4">
-                    The FPGA Drop-In Center at Carleton University is a hub for electrical engineering students to gain practical experience with Field-Programmable Gate Arrays (FPGAs). Supporting around 1,950 students annually across four courses, the center provides:
+                <p class="text-lg text-gray-700 mb-10 text-center max-w-3xl mx-auto">
+                    The FPGA Drop-In Center at Carleton University is a dynamic hub where electrical engineering students gain invaluable hands-on experience with Field-Programmable Gate Arrays (FPGAs). Annually supporting approximately 1,950 students across four core courses, our center is designed to empower learning and innovation.
                 </p>
-                <ul class="list-disc list-inside space-y-2 text-lg">
-                    <li>Self-paced learning with tutorials and Verilog guides.</li>
-                    <li>Access to industry-aligned projects with partners like XXXX, XXXX, and XXXX.</li>
-                    <li>Peer support and workshops for students at all levels.</li>
-                </ul>
-                <p class="text-lg mt-4">
-                    Located in the Department of Electronics, the center fosters a culture of experimentation, enabling students to develop skills essential for modern engineering challenges.
-                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                    <!-- Card 1: Self-Paced Learning -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center text-center card-animate hover:shadow-xl transition-shadow duration-300">
+                        <div class="text-5xl text-red-700 mb-4">📚</div>
+                        <h3 class="text-xl font-semibold text-red-700 mb-2">Self-Paced Learning</h3>
+                        <p class="text-gray-600 text-sm">Explore a rich library of tutorials and Verilog guides at your own speed, building a strong foundation in FPGA concepts and design.</p>
+                    </div>
+                    <!-- Card 2: Peer Support & Workshops -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center text-center card-animate hover:shadow-xl transition-shadow duration-300">
+                        <div class="text-5xl text-red-700 mb-4">🤝</div>
+                        <h3 class="text-xl font-semibold text-red-700 mb-2">Peer Support & Workshops</h3>
+                        <p class="text-gray-600 text-sm">Benefit from collaborative learning through peer support and engaging workshops tailored for students at all skill levels.</p>
+                    </div>
+                    <!-- Card 3: Culture of Experimentation -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center text-center card-animate hover:shadow-xl transition-shadow duration-300">
+                        <div class="text-5xl text-red-700 mb-4">🔬</div>
+                        <h3 class="text-xl font-semibold text-red-700 mb-2">Culture of Experimentation</h3>
+                        <p class="text-gray-600 text-sm">Located in the Department of Electronics, we foster an environment that encourages experimentation, helping you develop critical skills for modern engineering challenges.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-xl mt-10 text-gray-800"> <!-- Changed bg-red-50 to bg-white -->
+                    <h3 class="text-2xl font-bold text-red-700 mb-5 text-center">Visit Us</h3>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                        <!-- Left Column: Image -->
+                        <div class="flex justify-center lg:justify-start">
+                            <div class="w-full rounded-lg shadow-md overflow-hidden" style="height: 20rem;"> <!-- Container for cropping, h-80 (20rem) -->
+                                <img src="4166ME.png" alt="Floor layout of Room 4166 Mackenzie Building" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+
+                        <!-- Right Column: Text Content -->
+                        <div class="space-y-6 text-center lg:text-left">
+                            <div>
+                                <h4 class="text-xl font-semibold text-red-700 mb-2">Location</h4>
+                                <p class="text-lg">Room 4166, Mackenzie Building</p>
+                                <p class="text-md text-gray-600">(Beside the AI Exploratorium)</p>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold text-red-700 mb-2">Hours of Operation</h4>
+                                <p class="text-lg"><span class="font-semibold">Regular Access:</span> Mon - Fri, 9:30 AM - 5:30 PM</p>
+                                <p class="text-lg mt-1"><span class="font-semibold">Extended Card Swipe Access:</span></p>
+                                <ul class="list-none ml-0 mt-1 text-gray-700">
+                                    <li>Weekdays: Until 11:00 PM</li>
+                                    <li>Weekends: 9:30 AM - 8:00 PM</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
